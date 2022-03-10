@@ -29,27 +29,41 @@ body {
 img {
   max-width: 100%;
 }
+
 h1 {
   font-size: 5rem;
   color: var(--clr-light-yellow);
   text-shadow: 5px 3px var(--clr-light-blue);
+  margin-bottom: 2rem;
 }
 
 .card-container {
-  border: 1px solid white;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
+  grid-auto-rows: 250px;
 }
 
 .card {
+  cursor: pointer;
   border-radius: 1rem;
   background: white;
-  width: 150px;
-  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.4s ease-out;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  /* transform: translate(30px, 20px) rotate(20deg); */
+  transform: rotateZ(10deg);
+}
+
+.poke-img img {
+  border-radius: 1rem 1rem 0 0;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
 }
 
 .poke-name {
@@ -58,4 +72,13 @@ h1 {
   color: var(--clr-dark-yellow);
   padding: 1rem;
   border-radius: 0 0 1rem 1rem;
+}
+
+.card:hover .poke-name {
+  background: var(--clr-light-blue);
+  color: var(--clr-light-yellow);
+}
+
+.card:hover .poke-img img {
+  filter: grayscale(0%);
 }

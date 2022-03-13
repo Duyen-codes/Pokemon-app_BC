@@ -41,9 +41,30 @@ h1 {
   margin: 4rem 0;
 }
 
+.search-field {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 12px 20px 12px 50px;
+  border: 1px solid #ddd;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+
+i {
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .card-container {
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3.5rem;
   grid-auto-rows: 300px;
 }

@@ -1,5 +1,7 @@
 // Queries
 let allPokemonContainer = document.querySelector(".card-container");
+let cards = document.querySelectorAll(".card");
+let searchInput = document.querySelector(".search-input");
 
 const fetchData = () => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0")
@@ -24,7 +26,6 @@ const pokeCards = (dataFromFetch) => {
   const cards = dataFromFetch
     .map((dataItem) => {
       let types = dataItem.types.map((item) => item.type.name).join(", ");
-      console.log(types);
       return `<div class="card">
       <div class="poke-img">
         <img src="${dataItem.sprites.other.dream_world.front_default}" alt="" />

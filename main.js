@@ -11,18 +11,22 @@ const fetchData = () => {
         return fetch(dataItem.url).then((res) => res.json());
       });
       Promise.all(fetches).then((res) => {
-        pokeCards(res);
+        renderCards(res);
         let pokeType = res.forEach((resItem) =>
           resItem.types.forEach((resItemType) => {
             let eachPokeType = resItemType.type.name;
             return eachPokeType;
           })
         );
+
+        function search(items) {
+          return;
+        }
       });
     });
 };
 
-const pokeCards = (dataFromFetch) => {
+const renderCards = (dataFromFetch) => {
   const cards = dataFromFetch
     .map((dataItem) => {
       let types = dataItem.types.map((item) => item.type.name).join(", ");

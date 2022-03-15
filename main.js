@@ -1,7 +1,5 @@
 // Queries
 let allPokemonContainer = document.querySelector(".card-container");
-let cards = document.querySelectorAll(".card");
-let searchInput = document.querySelector(".search-input");
 
 const fetchData = () => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0")
@@ -18,13 +16,10 @@ const fetchData = () => {
             return eachPokeType;
           })
         );
-
-        function search(items) {
-          return;
-        }
       });
     });
 };
+fetchData();
 
 const renderCards = (dataFromFetch) => {
   const cards = dataFromFetch
@@ -44,4 +39,5 @@ const renderCards = (dataFromFetch) => {
   allPokemonContainer.innerHTML = cards;
 };
 
-fetchData();
+// Search
+const searchInput = document.querySelector("#search");

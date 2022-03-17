@@ -76,14 +76,14 @@ const renderPokemon = async (name) => {
     "beforeend",
     `
     <div class="card">
-//       <div class="poke-img">
-//         <img src="${data.sprites.other.dream_world.front_default}" alt="${name}" />
-//       </div>
-//       <div class="poke-details">
-//           <h4 class="poke-name">${name}</h4>
-//           <span class="poke-type">Type: ${types}</span>
-//       </div>
-//     </div>
+       <div class="poke-img">
+         <img src="${data.sprites.other.dream_world.front_default}" alt="${name}" />
+       </div>
+       <div class="poke-details">
+           <h4 class="poke-name">${name}</h4>
+           <span class="poke-type">Type: ${types}</span>
+       </div>
+     </div>
     `
   );
 };

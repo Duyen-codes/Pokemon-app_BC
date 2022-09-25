@@ -70,7 +70,6 @@ i {
 }
 
 .card {
-  cursor: pointer;
   border-radius: 1rem;
   background: white;
   display: flex;
